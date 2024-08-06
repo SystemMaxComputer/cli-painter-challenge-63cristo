@@ -3,7 +3,6 @@ import pytest
 from painter.model import Circle, Point, Rectangle, Triangle
 
 
-
 @pytest.fixture
 def point_1():
     return Point(3, 4)
@@ -73,8 +72,10 @@ def test_triangle_initializes_with_three_points(triangle):
 def test_triangle_area(triangle):
     assert triangle.area() == pytest.approx(13)
 
+
 def test_triangle_str(triangle):
     assert str(triangle) == "Triangle with vertices at (0, 0), (3, 4), and (8, 2)"
+
 
 def test_triangle_draw(triangle):
     triangle.draw()
